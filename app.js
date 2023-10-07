@@ -48,19 +48,17 @@ function comp(a, b){
 	}
 }
 
-function newEvent() {
-	let eList = JSON.parse(localStorage.getItem("events"));
+function newEvent(eList) {
 	const currEv = new Event(null, null, null);
 	currEv.event = document.querySelector('#event').value;
 	currEv.date = document.querySelector('#date').value;
 	currEv.priority = document.querySelector('#priority').value;
-	eList.push(currEv);
+	eList.unshift(currEv);
 	eList.sort(comp);
 	clearTable();
 	eList.forEach((val) => {
 		updateTable(val);
 	});
-	console.log(eList);
 	localStorage.setItem("events", JSON.stringify(eList));
 }
 
@@ -78,7 +76,8 @@ let button1 = document.querySelector('#submit1');
 let button2 = document.querySelector('#submit2');
 button1.addEventListener('click', e => {
 	e.preventDefault();
-	newEvent();
+	let eList = JSON.parse(localStorage.getItem("events"));
+	newEvent(eList);
 	
 })
 button2.addEventListener('click', e => {
