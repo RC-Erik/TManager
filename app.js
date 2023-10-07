@@ -49,6 +49,9 @@ function comp(a, b){
 }
 
 function newEvent(eList) {
+	if(eList === null){
+		eList = [];
+	}
 	const currEv = new Event(null, null, null);
 	currEv.event = document.querySelector('#event').value;
 	currEv.date = document.querySelector('#date').value;
