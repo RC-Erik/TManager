@@ -2,9 +2,9 @@ body {
 	width: 100%;
 	height: 100vh;
 	margin: 0;
-	background-color: #1b1b32;
-	color: #f5f6f7;
-	font: 16px Tahoma;
+	background-color: #323232;
+	color: #ffffff;
+	font: 20px Helvetica;
 	text-align: center;
 }
 h1, form, p, fieldset, table{
@@ -26,19 +26,19 @@ form {
 	width: 600px;
 	margin-top: 4em;
 	margin-bottom: 0.5em;
-	border-top: 3px solid #3b3b4f;
-	border-bottom: 3px solid #3b3b4f;
+	border-top: 5px solid #212121;
+	border-bottom: 5px solid #212121;
 }
 
 input, textarea {
 	margin: 0.5em auto;
-  	background-color: #0a0a23;
-  	border: 1px solid #0a0a23;
+  	background-color: #242424;
+  	border: 2px solid #212121;
   	color: #ffffff;
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 }
 
 p {
@@ -67,25 +67,48 @@ input, textarea{
 
 input[type="submit"], button{
 	padding: 0.5em 1em;
+	margin-top: 1.5em;
 	border-radius: 5px;
-	background-color: #3b3b4f;
-	border: 3px solid #0a0a23;
+	background-color: #242424;
+  	border: 3px solid #212121;
 }
 
 input[id="submit2"], button{
-	padding: 0.5em 1em;
-	border-radius: 5px;
-	background-color: #3b3b4f;
-	border: 3px solid #0a0a23;
 	margin-top: 0;
 	margin-bottom: 2em;
 }
 
 table{
 	margin: 2em auto;
+	border: 5px solid #212121;
 }
 
-td, th, table, caption{
-	border: 3px solid #3b3b4f;
+
+td, th{
+	padding: 1em;
+}
+
+caption {
+	font-size: 2em;
 	padding: 0.5em;
+}
+
+.head {
+	background-color: #212121;
+	padding-bottom: 1em;
+}
+
+.setting {
+	display: inline;
+	font-size: 1.5em;
+	background-color: #323232;
+	border: none;
+	color: #ffffff;
+	width: 49%;
+	height: 10vh;
+	margin: 0;
+}
+
+.close {
+	color: #000000;
 }
