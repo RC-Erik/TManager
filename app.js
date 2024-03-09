@@ -81,6 +81,7 @@ const button3 = document.querySelector('#eManager');
 const button4 = document.querySelector('#gRecord');
 const eM = document.querySelector('#eM');
 const gR = document.querySelector('#gR');
+const iT = document.querySelector('#iText');
 
 button1.addEventListener('click', e => {
 	e.preventDefault();
@@ -97,8 +98,10 @@ button2.addEventListener('click', e => {
 button3.addEventListener('click', e => {
 	eM.removeAttribute('hidden');
 	gR.setAttribute('hidden', true);
+	iT.setAttribute('hidden', true);
 })
 button4.addEventListener('click', e => {
 	gR.removeAttribute('hidden');
 	eM.setAttribute('hidden', true);
+	iT.setAttribute('hidden', true);
 })
