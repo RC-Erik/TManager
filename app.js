@@ -75,8 +75,13 @@ if(eList != null){
 	eList = [];
 }
 
-let button1 = document.querySelector('#submit1');
-let button2 = document.querySelector('#submit2');
+const button1 = document.querySelector('#submit1');
+const button2 = document.querySelector('#submit2');
+const button3 = document.querySelector('#eManager');
+const button4 = document.querySelector('#gRecord');
+const eM = document.querySelector('#eM');
+const gR = document.querySelector('#gR');
+
 button1.addEventListener('click', e => {
 	e.preventDefault();
 	let eList = JSON.parse(localStorage.getItem("events"));
@@ -88,4 +93,12 @@ button2.addEventListener('click', e => {
 	clearTable();
 	localStorage.clear();
 	eList = [];
+})
+button3.addEventListener('click', e => {
+	eM.removeAttribute('hidden');
+	gR.setAttribute('hidden', true);
+})
+button4.addEventListener('click', e => {
+	gR.removeAttribute('hidden');
+	eM.setAttribute('hidden', true);
 })
